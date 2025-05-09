@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    flex-direction:column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:auto;
+    overflow-y: auto;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("IMG-20250507-WA0031.jpg");
+    background-size:contain; 
+    background-position: right;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+h1 {
+    color: orange;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    font-size: 2.5em;
+    margin: 30px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.sidebar {
+    height:auto;
+    width: 390px;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: antiquewhite;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    color: #333;
+    padding: 12px 16px;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.sidebar:hover {
+    background-color: #ffa500;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #ff7a00;
+    color: antiquewhite;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover{
+	background-color: #e66a00;
+	transform: scale(1.05);
+}
+
+.top-image{
+	position: relative;
+	z-index: 10;
+	display: block;
+	margin: 20px auto;
+	max-width: 100%;
+	height: auto;
+    opacity: 0.7;
+}
+
+.site-footer {
+    margin-left: 400px; /* aligns with main content beside sidebar */
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  background-color: #ffe8cc;
+  margin-top: 900px;
+  border-top: 2px solid #ffd599;
+}
+
+@media (max-width:768px){
+	body{
+		flex-direction: column;
+		align-items: center;
+		overflow-y: auto;
+
+	}
+
+	.main-content{
+		margin: 0;
+		padding: 10px;
+		width: 100%;
+		align-items: center;
+		overflow-x: hidden;
+		overflow-y: auto;
+		flex-direction: column;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+       max-width:300px;
+    }
+
+	.sidebar{
+		width: 60%;
+		max-width: 100%;
+		height: auto;
+		position: relative;
+		box-shadow: none;
+		padding: 20px 10px;
+		margin-bottom: 20px;
+		overflow-y: auto;
+		max-height: 100vh;
+        
+	}
+
+	.cta-button{
+		width: 100%;
+		text-align: center;
+		padding: 12px 0;
+		margin: 10px auto;
+		pointer-events: auto;
+	}
+
+	h1{
+		font-size: 1.8em;
+		margin: 10px 0;
+		text-align: center;
+	}
+	 .site-footer {
+        margin-left: 0;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
